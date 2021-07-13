@@ -1,0 +1,9 @@
+* {
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

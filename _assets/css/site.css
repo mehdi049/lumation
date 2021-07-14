@@ -40,6 +40,7 @@
   text-decoration: none;
   font-weight: 700;
   text-align: center;
+  border: none;
 }
 
 .btn-orange:hover {
@@ -48,11 +49,19 @@
 
 .btn-orange-lg {
   display: block;
+  width: 100%;
   max-width: 260px;
   height: 61px;
   box-sizing: border-box;
   padding: 15px;
   box-shadow: 0px 3px 12px #f19659;
+}
+
+.form-control {
+  border: solid 1px #0d2e59;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 1700px) {
@@ -65,9 +74,23 @@
   .btn-orange {
     font-size: 18px;
   }
+
+  .form-control {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form-control {
+    font-size: 14px;
+  }
 }
 
 /** tags **/
+body {
+  background: #fafafa;
+}
+
 p {
   font-size: 22px;
   font-weight: 500;
@@ -88,9 +111,19 @@ h2 {
   font-weight: 700;
 }
 
+label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
 @media screen and (max-width: 1200px) {
   p {
     font-size: 18px;
+  }
+
+  label {
+    font-size: 16px;
   }
 
   li {
@@ -109,6 +142,10 @@ h2 {
 @media screen and (max-width: 992px) {
   p {
     font-size: 16px;
+  }
+
+  label {
+    font-size: 14px;
   }
 
   li {
@@ -530,4 +567,27 @@ li.nav-item a.dropdown-toggle:hover {
   box-sizing: border-box;
   margin: auto;
   margin-top: 50px;
+}
+
+/** contact **/
+#contact-section {
+  padding-bottom: 100px;
+  padding-top: 150px;
+}
+
+#contact-section #form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+#contact-section .btn-orange {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #contact-section {
+    padding-bottom: 50px;
+    padding-top: 100px;
+  }
 }

@@ -406,3 +406,110 @@ li.nav-item a.dropdown-toggle:hover {
 #our-services .tab-pane p {
   margin-top: 20px;
 }
+
+#our-services .nav-pills .nav-link {
+  background-color: transparent;
+  color: #212121;
+  width: 205px;
+  height: 240px;
+  box-sizing: border-box;
+  padding-top: 120px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 25px;
+  padding: 10px;
+}
+
+#our-services .nav-pills .nav-link.active,
+#our-services .nav-pills .nav-link:hover {
+  color: #ff6501;
+}
+
+#our-services .nav-pills .nav-link .tab-img {
+  background-color: #e8ecef;
+  background-repeat: no-repeat;
+  background-position: center 25px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+#our-services .nav-pills .nav-link.active .tab-img,
+#our-services .nav-pills .nav-link:hover .tab-img {
+  background-color: #0d2e59;
+}
+
+#our-services .nav-pills #carga-maritima-tab .tab-img {
+  background-image: url("../images/service-tab1-header-img.png");
+}
+#our-services .nav-pills #carga-maritima-tab.active .tab-img,
+#our-services .nav-pills #carga-maritima-tab:hover .tab-img {
+  background-image: url("../images/service-tab1-header-img-hover.png");
+}
+
+#our-services .nav-pills #carga-aerea-tab .tab-img {
+  background-image: url("../images/service-tab2-header-img.png");
+}
+#our-services .nav-pills #carga-aerea-tab.active .tab-img,
+#our-services .nav-pills #carga-aerea-tab:hover .tab-img {
+  background-image: url("../images/service-tab2-header-img-hover.png");
+}
+
+#our-services .nav-pills #carga-terrestre-tab .tab-img {
+  background-image: url("../images/service-tab3-header-img.png");
+}
+#our-services .nav-pills #carga-terrestre-tab.active .tab-img,
+#our-services .nav-pills #carga-terrestre-tab:hover .tab-img {
+  background-image: url("../images/service-tab3-header-img-hover.png");
+}
+
+#our-services .nav-pills #seguros-tab .tab-img {
+  background-image: url("../images/service-tab4-header-img.png");
+}
+#our-services .nav-pills #seguros-tab.active .tab-img,
+#our-services .nav-pills #seguros-tab:hover .tab-img {
+  background-image: url("../images/service-tab4-header-img-hover.png");
+}
+
+#our-services .nav-pills #proyectos-tab .tab-img {
+  background-image: url("../images/service-tab5-header-img.png");
+}
+#our-services .nav-pills #proyectos-tab.active .tab-img,
+#our-services .nav-pills #proyectos-tab:hover .tab-img {
+  background-image: url("../images/service-tab5-header-img-hover.png");
+}
+
+#our-services .nav-pills #aduana-tab .tab-img {
+  background-image: url("../images/service-tab6-header-img.png");
+}
+#our-services .nav-pills #aduana-tab.active .tab-img,
+#our-services .nav-pills #aduana-tab:hover .tab-img {
+  background-image: url("../images/service-tab6-header-img-hover.png");
+}
+
+#our-services .nav-pills #blitz-tab .tab-img {
+  background-image: url("../images/service-tab7-header-img.png");
+}
+
+#our-services .nav-pills #blitz-tab.active .tab-img,
+#our-services .nav-pills #blitz-tab:hover .tab-img {
+  background-color: inherit;
+}
+
+@media screen and (max-width: 1700px) {
+  #our-services .nav-pills .nav-link {
+    width: 166px;
+    height: inherit;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #our-services .nav-pills .nav-link {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #our-services .nav-pills .nav-link {
+    width: 205px;
+  }
+}

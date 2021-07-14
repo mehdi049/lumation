@@ -132,6 +132,14 @@ h2 {
   z-index: 1;*/
 }
 
+.navbar {
+  padding-bottom: 0px;
+}
+
+.navbar .container {
+  border-bottom: solid 1px #fff;
+}
+
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.1);
 }

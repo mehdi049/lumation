@@ -49,6 +49,7 @@
 
 .btn-orange:hover {
   text-decoration: none !important;
+  color: #fff;
 }
 
 .btn-orange-lg {
@@ -61,11 +62,24 @@
   box-shadow: 0px 3px 12px #f19659;
 }
 
-.form-control {
+.form-control,
+.form-select {
   border: solid 1px #0d2e59;
   padding: 10px 20px;
   font-size: 20px;
   font-weight: 500;
+}
+
+.form-check-input:checked {
+  background-color: #ff6501;
+  border-color: #ff6501;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #fff;
+  box-shadow: none;
+  border-color: inherit;
 }
 
 @media screen and (min-width: 1700px) {
@@ -118,7 +132,11 @@ h2 {
 label {
   font-size: 20px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 25px;
+}
+
+label.form-check-label {
+  margin-top: 0px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -594,6 +612,31 @@ li.nav-item a.dropdown-toggle:hover {
     padding-bottom: 50px;
     padding-top: 100px;
   }
+}
+
+/** modal form **/
+#modal-form .modal-header {
+  border-bottom: none;
+}
+
+#modal-form .modal-body {
+  padding-bottom: 50px;
+}
+
+#modal-form form {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#modal-form .btn-orange {
+  margin: auto;
+  margin-top: 50px;
+}
+
+#form-step3 p {
+  max-width: 600px;
+  margin: auto;
 }
 
 /** footer **/

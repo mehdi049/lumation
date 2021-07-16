@@ -624,6 +624,10 @@ li.nav-item a.dropdown-toggle:hover {
 }
 
 /** modal form **/
+#modal-form .modal-dialog {
+  max-width: 850px !important;
+}
+
 #modal-form .modal-header {
   border-bottom: none;
 }
@@ -646,6 +650,12 @@ li.nav-item a.dropdown-toggle:hover {
 #form-step3 p {
   max-width: 600px;
   margin: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  #modal-form .modal-dialog {
+    max-width: 1140px !important;
+  }
 }
 
 /** footer **/

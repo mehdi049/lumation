@@ -807,38 +807,38 @@
           <form>
             <div class="row">
               <div class="col-12 col-sm-4">
-                <label for="apellido" class="form-label"
+                <label for="contact-apellido" class="form-label"
                   >Nombre y Apellido*</label
                 >
                 <input
                   type="text"
                   class="form-control"
-                  id="apellido"
-                  name="apellido"
+                  id="contact-apellido"
+                  name="contact-apellido"
                   placeholder="Nombre y apellido"
                   required
                 />
               </div>
               <div class="col-12 col-sm-4">
-                <label for="email" class="form-label"
+                <label for="contact-email" class="form-label"
                   >Correo Electrónico*</label
                 >
                 <input
                   type="email"
                   class="form-control"
-                  id="email"
-                  name="email"
+                  id="contact-email"
+                  name="contact-email"
                   placeholder="Correo electrónico"
                   required
                 />
               </div>
               <div class="col-12 col-sm-4">
-                <label for="asunto" class="form-label">Asunto*</label>
+                <label for="contact-asunto" class="form-label">Asunto*</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="asunto"
-                  name="asunto"
+                  id="contact-asunto"
+                  name="contact-asunto"
                   placeholder="Escriba su asunto"
                   required
                 />
@@ -846,16 +846,22 @@
             </div>
             <div class="row">
               <div class="col">
-                <label for="message" class="form-label">Mensaje*</label>
+                <label for="contact-message" class="form-label">Mensaje*</label>
                 <textarea
                   type="text"
                   class="form-control"
-                  id="message"
-                  name="message"
+                  id="contact-message"
+                  name="contact-message"
                   placeholder="Escriba su mensaje"
                   rows="5"
                   required
                 ></textarea>
+                <input
+                  type="hidden"
+                  id="contact-lang"
+                  name="contact-lang"
+                  value="ES"
+                />
               </div>
             </div>
             <br />
@@ -1032,26 +1038,26 @@
                 </div>
                 <div class="row">
                   <div class="col-12 col-sm-6">
-                    <label for="asunto" class="form-label"
+                    <label for="telephono" class="form-label"
                       >Número de Teléfono</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="asunto"
-                      name="asunto"
+                      id="telephono"
+                      name="telephono"
                       placeholder="1234-5678"
                     />
                   </div>
                   <div class="col-12 col-sm-6">
-                    <label for="asunto" class="form-label"
+                    <label for="empresa" class="form-label"
                       >Nombre de empresa</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="asunto"
-                      name="asunto"
+                      id="empresa"
+                      name="empresa"
                       placeholder="Empresa"
                     />
                   </div>
@@ -1246,6 +1252,7 @@
                               id="marítimo-largo-lcl"
                               name="marítimo-largo-lcl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                           <div class="col-4">
@@ -1258,6 +1265,7 @@
                               id="marítimo-ancho-lcl"
                               name="marítimo-ancho-lcl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                           <div class="col-4">
@@ -1270,6 +1278,7 @@
                               id="marítimo-alto-lcl"
                               name="marítimo-alto-lcl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                         </div>
@@ -1335,15 +1344,13 @@
                         </select>
                       </div>
                       <div class="col-12 col-sm-6 col-lg-4">
-                        <label
-                          for="marítimo-tamaño-de-equipo-fcl"
-                          class="form-label"
+                        <label for="marítimo-tamaño-fcl" class="form-label"
                           >Tamaño de equipo</label
                         >
                         <select
                           class="form-select"
-                          id="marítimo-tamaño-de-equipo-fcl"
-                          name="marítimo-tamaño-de-equipo-fcl"
+                          id="marítimo-tamaño-fcl"
+                          name="marítimo-tamaño-fcl"
                         >
                           <option>20 gp</option>
                           <option>40 standard</option>
@@ -1416,8 +1423,8 @@
                       <input
                         type="text"
                         class="form-control"
-                        id="aéreopeso-total"
-                        name="aéreopeso-total"
+                        id="aéreo-peso-total"
+                        name="aéreo-peso-total"
                         placeholder="Peso total"
                       />
                     </div>
@@ -1444,6 +1451,7 @@
                             id="aéreo-largo"
                             name="aéreo-largo"
                             placeholder="00"
+                            min="0"
                           />
                         </div>
                         <div class="col-4">
@@ -1456,6 +1464,7 @@
                             id="aéreo-ancho"
                             name="aéreo-ancho"
                             placeholder="00"
+                            min="0"
                           />
                         </div>
                         <div class="col-4">
@@ -1468,6 +1477,7 @@
                             id="aéreo-alto"
                             name="aéreo-alto"
                             placeholder="00"
+                            min="0"
                           />
                         </div>
                       </div>
@@ -1485,14 +1495,14 @@
                       />
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4">
-                      <label for="aéreo-cantidad-de-paquetes" class="form-label"
+                      <label for="aéreo-cantidad" class="form-label"
                         >Cantidad de paquetes</label
                       >
                       <input
                         type="text"
                         class="form-control"
-                        id="aéreo-cantidad-de-paquetes"
-                        name="aéreo-cantidad-de-paquetes"
+                        id="aéreo-cantidad"
+                        name="aéreo-cantidad"
                         placeholder="Cantidad"
                       />
                     </div>
@@ -1528,8 +1538,8 @@
                       >
                       <select
                         class="form-select"
-                        id="aéreo-temperatura-lcl"
-                        name="aéreo-temperatura-lcl"
+                        id="aéreo-temperatura"
+                        name="aéreo-temperatura"
                       >
                         <option>0° c</option>
                         <option>7° a 10 ° c</option>
@@ -1597,16 +1607,14 @@
                         </select>
                       </div>
                       <div class="col-12 col-sm-6 col-lg-4">
-                        <label
-                          for="terrestre-volumen-peso-ltl"
-                          class="form-label"
+                        <label for="terrestre-volumen-ltl" class="form-label"
                           >Volumen (metros cúbicos)</label
                         >
                         <input
                           type="text"
                           class="form-control"
-                          id="terrestre-volumen-peso-ltl"
-                          name="terrestre-volumen-peso-ltl"
+                          id="terrestre-volumen-ltl"
+                          name="terrestre-volumen-ltl"
                           placeholder="Volumen"
                         />
                       </div>
@@ -1634,6 +1642,7 @@
                               id="terrestre-largo-ltl"
                               name="terrestre-largo-ltl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                           <div class="col-4">
@@ -1646,6 +1655,7 @@
                               id="terrestre-ancho-ltl"
                               name="terrestre-ancho-ltl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                           <div class="col-4">
@@ -1658,6 +1668,7 @@
                               id="terrestre-alto-ltl"
                               name="terrestre-alto-ltl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                         </div>
@@ -1732,6 +1743,7 @@
                               id="terrestre-largo-ftl"
                               name="terrestre-largo-ftl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                           <div class="col-4">
@@ -1744,6 +1756,7 @@
                               id="terrestre-ancho-ftl"
                               name="terrestre-ancho-ftl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                           <div class="col-4">
@@ -1756,6 +1769,7 @@
                               id="terrestre-alto-ftl"
                               name="terrestre-alto-ftl"
                               placeholder="00"
+                              min="0"
                             />
                           </div>
                         </div>
@@ -1778,15 +1792,13 @@
                         </select>
                       </div>
                       <div class="col-12 col-sm-6 col-lg-4">
-                        <label
-                          for="terrestre-temperatura-ftl"
-                          class="form-label"
+                        <label for="terrestre-tamaño-ftl" class="form-label"
                           >Tamaño de equipo</label
                         >
                         <select
                           class="form-select"
-                          id="terrestre-temperatura-ftl"
-                          name="terrestre-temperatura-ftl"
+                          id="terrestre-tamaño-ftl"
+                          name="terrestre-tamaño-ftl"
                         >
                           <option>1.5 tm</option>
                           <option>3.5 tm</option>
@@ -1869,6 +1881,7 @@
                         name="seguro-CIF"
                         placeholder="Valor CIF"
                       />
+                      <input type="hidden" id="lang" name="lang" value="ES" />
                     </div>
                   </div>
                 </div>

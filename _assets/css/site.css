@@ -83,6 +83,14 @@
   border-color: inherit;
 }
 
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+.form-check-input:active {
+  filter: brightness(100%);
+}
+
 @media screen and (min-width: 1700px) {
   .container {
     max-width: 1600px;

@@ -85,95 +85,121 @@ $(function () {
 
     let lang = $("#lang").val();
 
-    console.log("Step 1:");
-    console.log("Nombre y Apellido: " + apellido);
-    console.log("Correo Electrónico: " + email);
-    console.log("Número de Teléfono: " + telephono);
-    console.log("Nombre de empresa: " + empresa);
+    let step1 = {
+      apellido: apellido,
+      email: email,
+      telephono: telephono,
+      empresa: empresa,
+    };
 
-    console.log("Step 2:");
-    console.log("Cotizar option: " + cotizarOption);
-    console.log("Origen: " + origen);
-    console.log("Destino: " + destino);
+    let step2 = {
+      cotizarOption: cotizarOption,
+      origen: origen,
+      destino: destino,
+    };
 
-    console.log("Step 2-1:");
-    console.log("Maritimo option: " + maritimoOption);
+    let step2_1 = {
+      maritimoOption: maritimoOption,
+      lcl: {
+        marítimoPesoTotalLcl: marítimoPesoTotalLcl,
+        marítimoPesoLcl: marítimoPesoLcl,
+        marítimoVolumenLcl: marítimoVolumenLcl,
+        marítimoCantidadLcl: marítimoCantidadLcl,
+        marítimoLargoLcl: marítimoLargoLcl,
+        marítimoAnchoLcl: marítimoAnchoLcl,
+        marítimoAltoLcl: marítimoAltoLcl,
+        marítimoTipoDeProductoLcl: marítimoTipoDeProductoLcl,
+        marítimoTemperaturaLcl: marítimoTemperaturaLcl,
+      },
+      fcl: {
+        marítimoPesoTotalFcl: marítimoPesoTotalFcl,
+        marítimoPesoFcl: marítimoPesoFcl,
+        marítimoTamañoFcl: marítimoTamañoFcl,
+        marítimoCargaPeligrosaFcl: marítimoCargaPeligrosaFcl,
+        marítimoCargaRefrigeradaFcl: marítimoCargaRefrigeradaFcl,
+        marítimoTemperaturaFcl: marítimoTemperaturaFcl,
+      },
+    };
 
-    console.log("Step 2-1-1:");
-    console.log("(LCL) Peso total: " + marítimoPesoTotalLcl);
-    console.log("(LCL) Peso: " + marítimoPesoLcl);
-    console.log("(LCL) Volumen (metros cúbicos): " + marítimoVolumenLcl);
-    console.log("(LCL) Cantidad de paquetes: " + marítimoCantidadLcl);
-    console.log("(LCL) Largo: " + marítimoLargoLcl);
-    console.log("(LCL) Ancho: " + marítimoAnchoLcl);
-    console.log("(LCL) Alto: " + marítimoAltoLcl);
-    console.log("(LCL) Tipo de producto: " + marítimoTipoDeProductoLcl);
-    console.log("(LCL) Temperatura: " + marítimoTemperaturaLcl);
+    let step2_2 = {
+      aéreoPesoTotal: aéreoPesoTotal,
+      aéreoPeso: aéreoPeso,
+      aéreoLargo: aéreoLargo,
+      aéreoAncho: aéreoAncho,
+      aéreoAlto: aéreoAlto,
+      aéreoVolumen: aéreoVolumen,
+      aéreoCantidad: aéreoCantidad,
+      aéreoCargaPeligrosa: aéreoCargaPeligrosa,
+      aéreoCargaRefrigerada: aéreoCargaRefrigerada,
+      aéreoTemperatura: aéreoTemperatura,
+    };
 
-    console.log("Step 2-1-2:");
-    console.log("(FCL) Peso total: " + marítimoPesoTotalFcl);
-    console.log("(FCL) Peso: " + marítimoPesoFcl);
-    console.log("(FCL) Tamaño de equipo: " + marítimoTamañoFcl);
-    console.log("(FCL) Carga peligrosa: " + marítimoCargaPeligrosaFcl);
-    console.log("(FCL) Carga refrigerada: " + marítimoCargaRefrigeradaFcl);
-    console.log("(FCL) Temperatura: " + marítimoTemperaturaFcl);
+    let step2_3 = {
+      terrestreOption: terrestreOption,
+      ltl: {
+        terrestrePesoTotalLtl: terrestrePesoTotalLtl,
+        terrestrePesoLtl: terrestrePesoLtl,
+        terrestreVolumenLtl: terrestreVolumenLtl,
+        terrestreCantidadLtl: terrestreCantidadLtl,
+        terrestreLargoLtl: terrestreLargoLtl,
+        terrestreAnchoLtl: terrestreAnchoLtl,
+        terrestreAltoLtl: terrestreAltoLtl,
+      },
+      ftl: {
+        terrestrePesoTotalFtl: terrestrePesoTotalFtl,
+        terrestrePesoFtl: terrestrePesoFtl,
+        terrestreCargaPeligrosaFtl: terrestreCargaPeligrosaFtl,
+        terrestreCantidadFtl: terrestreCantidadFtl,
+        terrestreLargoFtl: terrestreLargoFtl,
+        terrestreAnchoFtl: terrestreAnchoFtl,
+        terrestreAltoFtl: terrestreAltoFtl,
+        terrestreTemperaturaFtl: terrestreTemperaturaFtl,
+        terrestreTamañoFtl: terrestreTamañoFtl,
+      },
+    };
 
-    console.log("Step 2-2:");
-    console.log("Peso total: " + aéreoPesoTotal);
-    console.log("Peso: " + aéreoPeso);
-    console.log("Largo: " + aéreoLargo);
-    console.log("Ancho: " + aéreoAncho);
-    console.log("Alto: " + aéreoAlto);
-    console.log("Volumen (metros cúbicos): " + aéreoVolumen);
-    console.log("Cantidad de paquetes: " + aéreoCantidad);
-    console.log("Carga peligrosa: " + aéreoCargaPeligrosa);
-    console.log("Carga refrigerada: " + aéreoCargaRefrigerada);
-    console.log("Temperatura: " + aéreoTemperatura);
+    let step2_4 = {
+      aduanaIncoterm: aduanaIncoterm,
+      aduanaMercancía: aduanaMercancía,
+      aduanaFactura: aduanaFactura,
+    };
 
-    console.log("Step 2-3:");
-    console.log("Terrestre option: " + terrestreOption);
+    let step2_5 = {
+      seguroCIF: seguroCIF,
+    };
 
-    console.log("Step 2-3-1:");
-    console.log("(LTL) Peso total: " + terrestrePesoTotalLtl);
-    console.log("(LTL) Peso: " + terrestrePesoLtl);
-    console.log("(LTL) Volumen (metros cúbicos): " + terrestreVolumenLtl);
-    console.log("(LTL) Cantidad de paquetes: " + terrestreCantidadLtl);
-    console.log("(LTL) Largo: " + terrestreLargoLtl);
-    console.log("(LTL) Ancho: " + terrestreAnchoLtl);
-    console.log("(LTL) Alto: " + terrestreAltoLtl);
+    $("#form-error").addClass("d-none");
 
-    console.log("Step 2-3-2:");
-    console.log("(FTL) Peso total: " + terrestrePesoTotalFtl);
-    console.log("(FTL) Peso: " + terrestrePesoFtl);
-    console.log("(FTL) Carga peligrosa: " + terrestreCargaPeligrosaFtl);
-    console.log("(FTL) Cantidad de paquetes: " + terrestreCantidadFtl);
-    console.log("(FTL) Largo: " + terrestreLargoFtl);
-    console.log("(FTL) Ancho: " + terrestreAnchoFtl);
-    console.log("(FTL) Alto: " + terrestreAltoFtl);
-    console.log("(FTL) Temperatura: " + terrestreTemperaturaFtl);
-    console.log("(FTL) Tamaño de equipo: " + terrestreTamañoFtl);
-
-    console.log("Step 2-4:");
-    console.log("Incoterm: " + aduanaIncoterm);
-    console.log("Mercancía: " + aduanaMercancía);
-    console.log("Valor de la factura: " + aduanaFactura);
-
-    console.log("Step 2-5:");
-    console.log("Valor CIF: " + seguroCIF);
-
-    console.log("LANG:");
-    console.log("Language: " + lang);
-
-    $("#form-step1").addClass("d-none");
-    $("#form-step2").addClass("d-none");
-    $("#form-step3").removeClass("d-none");
+    $.ajax({
+      url: "sendMail.php?lang=" + lang,
+      method: "post",
+      data: {
+        step1: JSON.stringify(step1),
+        step2: JSON.stringify(step2),
+        step2_1: JSON.stringify(step2_1),
+        step2_2: JSON.stringify(step2_2),
+        step2_3: JSON.stringify(step2_3),
+        step2_4: JSON.stringify(step2_4),
+        step2_5: JSON.stringify(step2_5),
+      },
+      dataType: "json",
+      complete: function (response) {
+        if (response.status === 200) {
+          $("#form-step1").addClass("d-none");
+          $("#form-step2").addClass("d-none");
+          $("#form-step3").removeClass("d-none");
+        } else {
+          $("#form-error").removeClass("d-none");
+        }
+      },
+    });
   });
 
   $("#step-3-submit").click(function () {
     setTimeout(() => {
       $("#form-step1").removeClass("d-none");
       $("#form-step3").addClass("d-none");
-    }, 1500);
+    }, 1000);
   });
 
   $("input[name=cotizar-option]").change(function () {

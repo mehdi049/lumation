@@ -10,14 +10,15 @@ $step2_5 = json_decode($_POST["step2_5"], true);
 $lang = $_GET["lang"];
 
 $body = "";
+$subject="";
 
 try {
 
-    $subject="TransLogistica: Formulario de cotización";
-
+    
 if ($lang == "ES")
 {
-    $subject="";
+    
+    $subject="TransLogistica: Formulario de cotización";
 
     /** step 1 */
     $body .= "<b>Nombre y Apellido: </b>" . $step1["apellido"] . "<br/>";

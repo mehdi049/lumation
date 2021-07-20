@@ -876,9 +876,42 @@
             </div>
             <br />
             <br />
-            <button type="submit" class="btn-orange btn-orange-lg">
+            <button
+              id="contact-form-submit"
+              type="button"
+              class="btn-orange btn-orange-lg"
+            >
               Enviar
             </button>
+
+            <div
+              id="contact-form-email-error"
+              class="d-none alert alert-danger"
+              role="alert"
+            >
+              Dirección de correo electrónico no válida.
+            </div>
+            <div
+              id="contact-form-required-error"
+              class="d-none alert alert-danger"
+              role="alert"
+            >
+              Todos los campos son obligatorios.
+            </div>
+            <div
+              id="contact-form-general-error"
+              class="d-none alert alert-danger"
+              role="alert"
+            >
+              Ocorreu um erro. Por favor, tente novamente.
+            </div>
+            <div
+              id="contact-form-success"
+              class="d-none alert alert-success"
+              role="alert"
+            >
+              Mensaje enviado con éxito.
+            </div>
           </form>
         </div>
       </div>
@@ -1008,15 +1041,6 @@
     >
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
-          <!--   <div class="modal-header">
-            <h5 class="modal-title">&nbsp;</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div> -->
           <div class="modal-body">
             <!-- step 1 -->
             <div id="form-step1">

@@ -205,8 +205,6 @@ $(function () {
         seguroCIF: seguroCIF,
       };
 
-      $("#form-error").addClass("d-none");
-
       /** send data to sendMail.php */
       $.ajax({
         url: "sendMail.php?lang=" + lang,
@@ -227,7 +225,7 @@ $(function () {
             $("#form-step2").addClass("d-none");
             $("#form-step3").removeClass("d-none");
           } else {
-            $("#form-error").removeClass("d-none");
+            $("#step2-general-form-error").removeClass("d-none");
           }
         },
       });
@@ -439,4 +437,76 @@ $(function () {
       }, 500);
     }
   });
+
+  /** contact form */
+  $("#contact-form-submit").click(function () {
+    if (validateContact()) {
+      let lang = $("#contact-lang").val();
+
+      let apellido = $("#contact-apellido").val();
+      let email = $("#contact-email").val();
+      let asunto = $("#contact-asunto").val();
+      let message = $("#contact-message").val();
+
+      let contact = {
+        apellido: apellido,
+        email: email,
+        asunto: asunto,
+        message: message,
+      };
+
+      /** send data to sendMailContact.php */
+      $.ajax({
+        url: "sendMailContact.php?lang=" + lang,
+        method: "post",
+        data: {
+          form: JSON.stringify(contact),
+        },
+        dataType: "json",
+        complete: function (response) {
+          if (response.status === 200) {
+            $("#contact-section input, #contact-section textarea").each(
+              function () {
+                $(this).val("");
+                $("#contact-form-success").removeClass("d-none");
+              }
+            );
+          } else {
+            $("#contact-form-general-error").removeClass("d-none");
+          }
+        },
+      });
+    }
+  });
+
+  /** validate contact form */
+  function validateContact() {
+    $("#contact-form-general-error").addClass("d-none");
+    $("#contact-form-required-error").addClass("d-none");
+    $("#contact-form-email-error").addClass("d-none");
+    $("#contact-email").removeClass("invalid-input");
+
+    let valid = true;
+    let regEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+
+    let email = $("#contact-email").val();
+
+    $("#contact-section input, #contact-section textarea").each(function () {
+      $(this).removeClass("invalid-input");
+      let value = $(this).val();
+      if (value.length == 0) {
+        valid = false;
+        $(this).addClass("invalid-input");
+      }
+    });
+    if (!valid) $("#contact-form-required-error").removeClass("d-none");
+
+    if (email !== null && email.length > 0 && regEmail.test(email) === false) {
+      $("#contact-form-email-error").removeClass("d-none");
+      $("#contact-email").addClass("invalid-input");
+      valid = false;
+    }
+
+    return valid;
+  }
 });

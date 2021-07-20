@@ -14,7 +14,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.fw400 {
+.fw-400 {
   font-weight: 400 !important;
 }
 
@@ -31,10 +31,13 @@
   background-repeat: no-repeat;
   background-position: top left;
   padding-left: 15px;
+  margin-left: 50px;
 }
 
 .orange-bar-bg.p-lg {
   padding-left: 28px;
+  margin-left: 0px;
+  padding-right: 70px;
 }
 
 .btn-orange {
@@ -97,6 +100,14 @@
   border-color: none;
 }
 
+.pr-0 {
+  padding-right: 0px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
 @media screen and (min-width: 1700px) {
   .container {
     max-width: 1600px;
@@ -116,6 +127,24 @@
 @media screen and (max-width: 992px) {
   .form-control {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pr-0 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  .pl-0 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  .orange-bar-bg {
+    margin-left: 0px;
+  }
+
+  .orange-bar-bg.p-lg {
+    padding-right: 0px;
   }
 }
 
@@ -200,14 +229,15 @@ label.form-check-label {
 
 /** menu section **/
 #menu-section {
-  /* position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;*/
+  z-index: 2;
 }
 
 .navbar {
   padding-bottom: 0px;
+  padding-top: 14px;
 }
 
 .navbar .container {
@@ -344,10 +374,6 @@ li.nav-item a.dropdown-toggle:hover {
 }
 
 @media screen and (max-width: 992px) {
-  #menu-section {
-    /*position: relative;*/
-  }
-
   .nav-item .btn-orange {
     padding: 5px;
     width: 60px;
@@ -360,10 +386,6 @@ li.nav-item a.dropdown-toggle:hover {
 }
 
 /** carousel **/
-.carousel-inner {
-  /*height: 100vh;*/
-}
-
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   opacity: 0;
@@ -404,6 +426,9 @@ li.nav-item a.dropdown-toggle:hover {
 }
 
 @media screen and (max-width: 768px) {
+  #carousel-section {
+    margin-top: 78px;
+  }
   .carousel-caption {
     bottom: 5%;
   }
@@ -502,7 +527,7 @@ li.nav-item a.dropdown-toggle:hover {
 #our-services .nav-pills .nav-link .tab-img {
   background-color: #e8ecef;
   background-repeat: no-repeat;
-  background-position: center 25px;
+  background-position: center;
   height: 150px;
   margin-bottom: 15px;
 }
@@ -560,15 +585,6 @@ li.nav-item a.dropdown-toggle:hover {
   background-image: url("../images/service-tab6-header-img-hover.png");
 }
 
-#our-services .nav-pills #blitz-tab .tab-img {
-  background-image: url("../images/service-tab7-header-img.png");
-}
-
-#our-services .nav-pills #blitz-tab.active .tab-img,
-#our-services .nav-pills #blitz-tab:hover .tab-img {
-  background-color: inherit;
-}
-
 @media screen and (max-width: 1700px) {
   #our-services .nav-pills .nav-link {
     width: 166px;
@@ -590,7 +606,8 @@ li.nav-item a.dropdown-toggle:hover {
 
 /** certifications **/
 #certifications {
-  padding: 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 80px;
 }
 
 #certifications h2 {
@@ -691,5 +708,8 @@ li.nav-item a.dropdown-toggle:hover {
 @media screen and (max-width: 576px) {
   #footer span.footer-header {
     margin-top: 20px;
+  }
+  #footer span {
+    text-align: center;
   }
 }

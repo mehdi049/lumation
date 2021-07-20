@@ -585,6 +585,15 @@ li.nav-item a.dropdown-toggle:hover {
   background-image: url("../images/service-tab6-header-img-hover.png");
 }
 
+#our-services .nav-pills #blitz-tab .tab-img {
+  background-image: url("../images/service-tab7-header-img.png");
+}
+
+#our-services .nav-pills #blitz-tab.active .tab-img,
+#our-services .nav-pills #blitz-tab:hover .tab-img {
+  background-color: inherit;
+}
+
 @media screen and (max-width: 1700px) {
   #our-services .nav-pills .nav-link {
     width: 166px;

@@ -242,6 +242,7 @@ label.form-check-label {
 
 .navbar .container {
   border-bottom: solid 1px #fff;
+  margin-bottom: -0.5px;
 }
 
 .navbar-toggler {
@@ -265,16 +266,16 @@ label.form-check-label {
   width: 100%;
 }
 
-li.nav-item {
+#menu-section li.nav-item {
   margin-left: 20px;
   font-size: 22px;
 }
 
-li.nav-item a:hover {
+#menu-section li.nav-item a:hover {
   text-decoration: underline;
 }
 
-li.nav-item a.dropdown-toggle:hover {
+#menu-section li.nav-item a.dropdown-toggle:hover {
   text-decoration: none;
 }
 
@@ -309,16 +310,16 @@ li.nav-item a.dropdown-toggle:hover {
     width: 200px;
   }
 
-  li.nav-item {
+  #menu-section li.nav-item {
     margin-left: 16px;
     font-size: 18px;
   }
 
-  .nav-item .dropdown-item {
+  #menu-section .nav-item .dropdown-item {
     font-size: 18px;
   }
 
-  .nav-item .btn-orange {
+  #menu-section .nav-item .btn-orange {
     font-size: 16px;
   }
 
@@ -332,16 +333,16 @@ li.nav-item a.dropdown-toggle:hover {
     width: 160px;
   }
 
-  li.nav-item {
+  #menu-section li.nav-item {
     margin-left: 14px;
     font-size: 16px;
   }
 
-  .nav-item .dropdown-item {
+  #menu-section .nav-item .dropdown-item {
     font-size: 16px;
   }
 
-  .nav-item .btn-orange {
+  #menu-section .nav-item .btn-orange {
     font-size: 14px;
   }
 
@@ -355,16 +356,16 @@ li.nav-item a.dropdown-toggle:hover {
     width: 140px;
   }
 
-  li.nav-item {
+  #menu-section li.nav-item {
     margin-left: 10px;
     font-size: 13px;
   }
 
-  .nav-item .dropdown-item {
+  #menu-section .nav-item .dropdown-item {
     font-size: 13px;
   }
 
-  .nav-item .btn-orange {
+  #menu-section .nav-item .btn-orange {
     font-size: 11px;
   }
 
@@ -374,7 +375,7 @@ li.nav-item a.dropdown-toggle:hover {
 }
 
 @media screen and (max-width: 992px) {
-  .nav-item .btn-orange {
+  #menu-section .nav-item .btn-orange {
     padding: 5px;
     width: 60px;
     text-align: center;
@@ -607,9 +608,21 @@ li.nav-item a.dropdown-toggle:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #our-services .tab-pane {
+    padding-top: 20px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   #our-services .nav-pills .nav-link {
     width: 205px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #our-services .nav-pills .nav-link {
+    width: 150px;
   }
 }
 
@@ -652,6 +665,12 @@ li.nav-item a.dropdown-toggle:hover {
   #contact-section {
     padding-bottom: 50px;
     padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #contact-section {
+    padding-top: 50px;
   }
 }
 

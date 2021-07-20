@@ -1,25 +1,27 @@
 $(function () {
+  /** submit step 1 */
   $("#step-1-submit").click(function () {
     $("#form-step1").addClass("d-none");
     $("#form-step2").removeClass("d-none");
   });
 
+  /** submit step 2 data */
   $("#step-2-submit").click(function () {
-    /** step 1 */
+    /** collect step 1 data */
     let apellido = $("#apellido").val();
     let email = $("#email").val();
     let telephono = $("#telephono").val();
     let empresa = $("#empresa").val();
 
-    /** step 2 */
+    /** collect step 2 data */
     let cotizarOption = $("input[name=cotizar-option]:checked").val();
     let origen = $("#origen").val();
     let destino = $("#destino").val();
 
-    /** step 2-1 */
+    /** collect step 2-1 data */
     let maritimoOption = $("input[name=maritimo-option]:checked").val();
 
-    /** step 2-1-1 (LCL) */
+    /** collect step 2-1-1 (LCL) data */
     let marítimoPesoTotalLcl = $("#marítimo-peso-total-lcl").val();
     let marítimoPesoLcl = $("#marítimo-peso-lcl").val();
     let marítimoVolumenLcl = $("#marítimo-volumen-lcl").val();
@@ -30,7 +32,7 @@ $(function () {
     let marítimoTipoDeProductoLcl = $("#marítimo-tipo-de-producto-lcl").val();
     let marítimoTemperaturaLcl = $("#marítimo-temperatura-lcl").val();
 
-    /** step 2-1-2 (FCL) */
+    /** collect step 2-1-2 (FCL) data */
     let marítimoPesoTotalFcl = $("#marítimo-peso-total-fcl").val();
     let marítimoPesoFcl = $("#marítimo-peso-fcl").val();
     let marítimoTamañoFcl = $("#marítimo-tamaño-fcl").val();
@@ -40,7 +42,7 @@ $(function () {
     ).val();
     let marítimoTemperaturaFcl = $("#marítimo-temperatura-fcl").val();
 
-    /** step 2-2 */
+    /** collect step 2-2 data */
     let aéreoPesoTotal = $("#aéreo-peso-total").val();
     let aéreoPeso = $("#aéreo-peso").val();
     let aéreoLargo = $("#aéreo-largo").val();
@@ -52,10 +54,10 @@ $(function () {
     let aéreoCargaRefrigerada = $("#aéreo-carga-refrigerada").val();
     let aéreoTemperatura = $("#aéreo-temperatura").val();
 
-    /** step 2-3 */
+    /** collect step 2-3 data */
     let terrestreOption = $("input[name=terrestre-option]:checked").val();
 
-    /** step 2-3-1 (LTL) */
+    /** collect step 2-3-1 (LTL) data */
     let terrestrePesoTotalLtl = $("#terrestre-peso-total-ltl").val();
     let terrestrePesoLtl = $("#terrestre-peso-ltl").val();
     let terrestreVolumenLtl = $("#terrestre-volumen-ltl").val();
@@ -64,7 +66,7 @@ $(function () {
     let terrestreAnchoLtl = $("#terrestre-ancho-ltl").val();
     let terrestreAltoLtl = $("#terrestre-alto-ltl").val();
 
-    /** step 2-3-2 (FTL) */
+    /** collect step 2-3-2 (FTL) data */
     let terrestrePesoTotalFtl = $("#terrestre-peso-total-ftl").val();
     let terrestrePesoFtl = $("#terrestre-peso-ftl").val();
     let terrestreCargaPeligrosaFtl = $("#terrestre-carga-peligrosa-ftl").val();
@@ -75,12 +77,12 @@ $(function () {
     let terrestreTemperaturaFtl = $("#terrestre-temperatura-ftl").val();
     let terrestreTamañoFtl = $("#terrestre-tamaño-ftl").val();
 
-    /** step 2-4 */
+    /** collect step 2-4 data */
     let aduanaIncoterm = $("#aduana-incoterm").val();
     let aduanaMercancía = $("#aduana-mercancía").val();
     let aduanaFactura = $("#aduana-factura").val();
 
-    /** step 2-5 */
+    /** collect step 2-5 data */
     let seguroCIF = $("#seguro-CIF").val();
 
     let lang = $("#lang").val();
@@ -170,6 +172,7 @@ $(function () {
 
     $("#form-error").addClass("d-none");
 
+    /** send data to sendMail.php */
     $.ajax({
       url: "sendMail.php?lang=" + lang,
       method: "post",
@@ -195,6 +198,7 @@ $(function () {
     });
   });
 
+  /** close step 3 */
   $("#step-3-submit").click(function () {
     setTimeout(() => {
       $("#form-step1").removeClass("d-none");
@@ -202,6 +206,7 @@ $(function () {
     }, 1000);
   });
 
+  /** display fields based on main options */
   $("input[name=cotizar-option]").change(function () {
     let value = $(this).val();
     switch (value) {
@@ -238,6 +243,7 @@ $(function () {
     }
   });
 
+  /** martimp LCL / FCL options change */
   $("input[name=maritimo-option]").change(function () {
     let value = $(this).val();
     switch (value) {
@@ -252,6 +258,7 @@ $(function () {
     }
   });
 
+  /** terrestre LTL / FTL options change */
   $("input[name=terrestre-option]").change(function () {
     let value = $(this).val();
     switch (value) {
@@ -263,6 +270,36 @@ $(function () {
         $("#form-step2-3-1").addClass("d-none");
         $("#form-step2-3-2").removeClass("d-none");
         break;
+    }
+  });
+
+  /** smooth scroll */
+  $('.nav-pills .nav-link[data-bs-target*="#"]').click(function (event) {
+    if (window.screen.width <= 768) {
+      var target = $(this).attr("data-bs-target");
+      setTimeout(function () {
+        target = $("[id=" + target.replace(/#/g, "") + "]");
+
+        if (target.length) {
+          event.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top - 100,
+            },
+            100,
+            function () {
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) {
+                return false;
+              } else {
+                $target.attr("tabindex", "-1");
+                $target.focus();
+              }
+            }
+          );
+        }
+      }, 500);
     }
   });
 });

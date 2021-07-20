@@ -1075,13 +1075,34 @@
                     />
                   </div>
                 </div>
-                <button
-                  type="button"
-                  class="btn-orange btn-orange-lg"
-                  id="step-1-submit"
-                >
-                  Siguiente
-                </button>
+                <div class="row">
+                  <div class="col-12">
+                    <div id="form-step1-submit-container">
+                      <button
+                        type="button"
+                        class="btn-orange btn-orange-lg"
+                        id="step-1-submit"
+                      >
+                        Siguiente
+                      </button>
+                      <br />
+                      <div
+                        id="step1-required-form-error"
+                        class="d-none alert alert-danger"
+                        role="alert"
+                      >
+                        Todos los campos son obligatorios.
+                      </div>
+                      <div
+                        id="step1-email-form-error"
+                        class="d-none alert alert-danger"
+                        role="alert"
+                      >
+                        Dirección de correo electrónico no válida.
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </form>
             </div>
 
@@ -1898,7 +1919,8 @@
                     </div>
                   </div>
                 </div>
-                <div id="form-submit-container">
+
+                <div id="form-step2-submit-container">
                   <button
                     type="button"
                     class="btn-orange btn-orange-lg"
@@ -1909,7 +1931,14 @@
 
                   <br />
                   <div
-                    id="form-error"
+                    id="step2-required-form-error"
+                    class="d-none alert alert-danger"
+                    role="alert"
+                  >
+                    Todos los campos son obligatorios.
+                  </div>
+                  <div
+                    id="step2-general-form-error"
                     class="d-none alert alert-danger"
                     role="alert"
                   >

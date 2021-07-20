@@ -94,6 +94,11 @@
   filter: brightness(100%);
 }
 
+.invalid-input {
+  border-color: rgb(230 27 27);
+  border-width: 2px;
+}
+
 .alert-danger {
   color: #ffffff;
   background-color: #d02f3d;
@@ -727,15 +732,15 @@ label.form-check-label {
   padding: 40px;
 }
 
-#form-submit-container {
+#form-step2-submit-container {
   background-color: #fff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 10px;
+  padding: 10px 40px;
   margin-top: -5px;
 }
 
-#form-submit-container .btn-orange {
+#form-step2-submit-container .btn-orange {
   margin-top: 0px;
 }
 
@@ -767,6 +772,9 @@ label.form-check-label {
   #form-step2-4,
   #form-step2-5 {
     padding: 20px;
+  }
+  #form-step2-submit-container {
+    padding: 10px 20px;
   }
   #form-step1,
   #form-step2,

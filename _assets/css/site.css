@@ -647,6 +647,10 @@ li.nav-item a.dropdown-toggle:hover {
 }
 
 /** modal form **/
+#modal-form .modal-content {
+  background: transparent;
+}
+
 #modal-form .modal-dialog {
   max-width: 850px !important;
 }
@@ -655,19 +659,62 @@ li.nav-item a.dropdown-toggle:hover {
   border-bottom: none;
 }
 
-#modal-form .modal-body {
-  padding-bottom: 50px;
-}
-
 #modal-form form {
-  max-width: 900px;
+  max-width: 1462px;
   margin: auto;
-  margin-top: 20px;
 }
 
 #modal-form .btn-orange {
   margin: auto;
   margin-top: 50px;
+}
+
+#form-step1,
+#form-step2,
+#form-step3 {
+  padding: 1rem;
+  padding-bottom: 50px;
+}
+
+#form-step1 {
+  background-color: #fff;
+  padding-top: 50px;
+}
+
+#form-step2-header {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+#form-step2-1,
+#form-step2-2,
+#form-step2-3,
+#form-step2-4,
+#form-step2-5,
+#form-step3 {
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 40px;
+}
+
+#form-submit-container {
+  background-color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 10px;
+  margin-top: -5px;
+}
+
+#form-submit-container .btn-orange {
+  margin-top: 0px;
+}
+
+#form-step1 .row,
+#form-step2-header .row {
+  max-width: 800px;
+  margin: auto;
 }
 
 #form-step3 p {
@@ -678,6 +725,25 @@ li.nav-item a.dropdown-toggle:hover {
 @media screen and (min-width: 1200px) {
   #modal-form .modal-dialog {
     max-width: 1140px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-body {
+    padding: 0rem;
+  }
+  #form-step2-header,
+  #form-step2-1,
+  #form-step2-2,
+  #form-step2-3,
+  #form-step2-4,
+  #form-step2-5 {
+    padding: 20px;
+  }
+  #form-step1,
+  #form-step2,
+  #form-step3 {
+    padding-top: 2rem 0rem;
   }
 }
 

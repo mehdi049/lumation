@@ -68,10 +68,11 @@
 .form-control,
 .form-select {
   border: solid 1px #0d2e59;
-  padding: 10px 20px;
+  padding: 15px 20px;
   font-size: 20px;
   font-weight: 500;
   min-height: 52px;
+  border-radius: 10px;
 }
 
 .form-check-input:checked {
@@ -113,9 +114,14 @@
   padding-left: 0px;
 }
 
-@media screen and (min-width: 1700px) {
+.img-fluid-lg {
+  max-width: inherit;
+  width: 100%;
+}
+
+@media screen and (min-width: 1750px) {
   .container {
-    max-width: 1600px;
+    max-width: 1750px;
   }
 }
 
@@ -242,7 +248,7 @@ label.form-check-label {
 
 .navbar {
   padding-bottom: 0px;
-  padding-top: 14px;
+  padding-top: 18px;
 }
 
 .navbar .container {
@@ -272,7 +278,7 @@ label.form-check-label {
 }
 
 #menu-section li.nav-item {
-  margin-left: 20px;
+  margin-left: 30px;
   font-size: 22px;
 }
 
@@ -310,7 +316,14 @@ label.form-check-label {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1700px) {
+.navbar-expand-lg .navbar-nav .nav-link.btn-orange {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 1750px) {
   #top-logo {
     width: 200px;
   }
@@ -380,6 +393,9 @@ label.form-check-label {
 }
 
 @media screen and (max-width: 992px) {
+  .navbar {
+    padding-top: 0px;
+  }
   #menu-section .nav-item .btn-orange {
     padding: 5px;
     width: 60px;
@@ -392,6 +408,10 @@ label.form-check-label {
 }
 
 /** carousel **/
+#carousel-section {
+  max-height: 940px;
+  overflow: hidden;
+}
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   opacity: 0;
@@ -433,7 +453,7 @@ label.form-check-label {
 
 @media screen and (max-width: 768px) {
   #carousel-section {
-    margin-top: 78px;
+    margin-top: 60px;
   }
   .carousel-caption {
     bottom: 5%;
@@ -459,8 +479,8 @@ label.form-check-label {
 
 /** numbers-section **/
 #numbers-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-image: url(../images/numbers-section-bg.png);
   background-position: center;
   background-size: cover;
@@ -470,6 +490,12 @@ label.form-check-label {
 #numbers-section span {
   font-size: 30px;
   display: block;
+}
+
+@media screen and (min-width: 1750px) {
+  #numbers-section .container {
+    max-width: 1500px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -499,7 +525,7 @@ label.form-check-label {
 
 /** our services **/
 #our-services {
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 100px;
   overflow-x: hidden;
 }
@@ -510,13 +536,12 @@ label.form-check-label {
 
 #our-services .tab-pane p {
   margin-top: 20px;
+  max-width: 1050px;
 }
 
 #our-services .nav-pills .nav-link {
   background-color: transparent;
   color: #212121;
-  width: 205px;
-  height: 240px;
   box-sizing: border-box;
   padding-top: 120px;
   font-family: "Poppins";
@@ -600,7 +625,7 @@ label.form-check-label {
   background-color: inherit;
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1750px) {
   #our-services .nav-pills .nav-link {
     width: 166px;
     height: inherit;
@@ -633,8 +658,12 @@ label.form-check-label {
 
 /** certifications **/
 #certifications {
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 80px;
+}
+
+#certifications .container {
+  max-width: 1300px;
 }
 
 #certifications h2 {
@@ -656,10 +685,16 @@ label.form-check-label {
   padding-top: 150px;
 }
 
+#contact-section .container {
+  max-width: 1400px;
+}
+
 #contact-section #form-container {
   background: #fff;
   padding: 30px;
   border-radius: 20px;
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 #contact-section .btn-orange {

@@ -47,12 +47,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a
+                  class="nav-link scroll-tab active"
+                  aria-current="page"
+                  href="#carousel-section"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link scroll-tab" href="#our-services">Nosotros</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -66,22 +69,60 @@
                   Carga
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Marítima</a></li>
-                  <li><a class="dropdown-item" href="#">Aérea</a></li>
-                  <li><a class="dropdown-item" href="#">Terrestre</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item scroll-tab"
+                      href="#our-services"
+                      data-bs-target="#carga-maritima-tab"
+                      >Marítima</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item scroll-tab"
+                      href="#our-services"
+                      data-bs-target="#carga-aerea-tab"
+                      >Aérea</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item scroll-tab"
+                      href="#our-services"
+                      data-bs-target="#carga-terrestre-tab"
+                      >Terrestre</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Proyectos</a>
+                <a
+                  class="nav-link scroll-tab"
+                  href="#our-services"
+                  data-bs-target="#seguros-tab"
+                  >Seguros</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Seguros</a>
+                <a
+                  class="nav-link scroll-tab"
+                  href="#our-services"
+                  data-bs-target="#proyectos-tab"
+                  >Proyectos</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Aduanas</a>
+                <a
+                  class="nav-link scroll-tab"
+                  href="#our-services"
+                  data-bs-target="#aduana-tab"
+                  >Aduanas</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link scroll-tab" href="#contact-section"
+                  >Contacto</a
+                >
               </li>
               <li class="nav-item">
                 <a
@@ -698,15 +739,15 @@
         <br />
         <br />
         <div class="row">
-          <div class="col-12 col-md-6 pr-0">
+          <div class="col-12 col-xxl-6 pr-0">
             <img
               src="_assets/images/service-img1.png"
               alt=""
               class="img-fluid-lg"
             />
           </div>
-          <div class="col-12 col-md-6 pl-0">
-            <br class="d-block d-md-none" />
+          <div class="col-12 col-xxl-6 pl-0">
+            <br class="d-block d-xxl-none" />
             <p class="orange-bar-bg">
               ¡Alrededor del mundo, a través de la ciudad, TRANSLOGISTICA de
               Guatemala, El Salvador y Costa Rica entrega su carga donde y como
@@ -722,7 +763,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-md-6 pr-0">
+          <div class="col-12 col-xxl-6 pr-0 order-2 order-xxl-1">
             <br class="d-none d-xxl-block" />
             <br class="d-none d-xxl-block" />
             <br />
@@ -754,7 +795,7 @@
               <br />
             </div>
           </div>
-          <div class="col-12 col-md-6 pl-0">
+          <div class="col-12 col-xxl-6 pl-0 order-1 order-xxl-2">
             <img
               src="_assets/images/service-img2.png"
               alt=""
@@ -923,7 +964,7 @@
     <div id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-2">
+          <div class="col-12 col-md-2">
             <span class="footer-header">Sitio</span>
             <span>Inicio</span>
             <span>Nosotros</span>
@@ -934,7 +975,7 @@
             <span>Contacto</span>
           </div>
           <div class="d-none d-md-block col-md-1"></div>
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-md-3">
             <br class="d-block d-sm-none" />
             <span class="footer-header">Guatemala</span>
             <span
@@ -975,7 +1016,7 @@
             >
           </div>
           <div class="d-none d-md-block col-md-2"></div>
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-md-3">
             <span class="footer-header">Miami, USA</span>
             <span
               ><img
